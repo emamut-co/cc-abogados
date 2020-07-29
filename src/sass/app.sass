@@ -1,4 +1,35 @@
+$fa-font-path: '../webfonts'
+
+@import '~bootstrap/scss/bootstrap'
+
+@import '~@fortawesome/fontawesome-free/scss/fontawesome'
+@import '~@fortawesome/fontawesome-free/scss/brands'
+@import '~@fortawesome/fontawesome-free/scss/regular'
+@import '~@fortawesome/fontawesome-free/scss/solid'
+
 @import "~bootstrap/scss/bootstrap"
+
+@import 'colors'
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Roboto:wght@300;400;700&display=swap')
 
 [v-cloak]
   display: none
+
+body
+  font-family: 'Roboto', sans-serif
+
+#primary-menu
+  .menu-item
+    padding-left: .5rem
+    padding-right: .5rem
+    a
+      font-family: 'Merriweather', serif
+      font-weight: normal
+      &::after
+        content: '\00B7'
+        margin-left: .5rem
+    &.active
+      border-bottom: .5rem solid $golden
+      a
+        color: $dark
