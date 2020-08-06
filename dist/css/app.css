@@ -26062,6 +26062,14 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.font-golden {
+  color: #B7884B !important;
+}
+
+.font-blue {
+  color: #3A4462 !important;
+}
+
 #primary-menu .menu-item {
   margin-right: 0.5rem;
 }
@@ -26090,14 +26098,6 @@ body {
 .title, .subtitle {
   font-family: "Merriweather", serif;
   font-weight: 300;
-}
-
-.title {
-  color: #3A4462;
-}
-
-.subtitle {
-  color: #B7884B;
 }
 
 .btn-action {
