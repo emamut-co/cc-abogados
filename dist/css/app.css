@@ -26095,7 +26095,7 @@ body {
   color: #B7884B;
 }
 
-.title, .subtitle {
+.main-title, .main-subtitle {
   font-family: "Merriweather", serif;
   font-weight: 300;
 }
@@ -26109,5 +26109,19 @@ body {
   border-right: 1px solid #d2d2d2;
   padding-right: 0.6rem;
   font-size: 0.9rem;
+}
+
+.subtitle {
+  font-family: "Merriweather", serif;
+  color: #B7884B;
+}
+.subtitle::before {
+  content: "";
+  border-left: 0.4rem solid #B7884B;
+  margin-right: 0.5rem;
+}
+
+#our-team .card .card-title {
+  font-family: "Merriweather", serif;
 }
 /*# sourceMappingURL=app.css.map*/
