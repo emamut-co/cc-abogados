@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php get_header();
+
+$areasArray = new WP_Query(array(
+  'post_type' => 'areas-de-practica',
+  'post_status' => 'publish'
+)); ?>
 
   <div class="container mx-auto">
     <div class="row justify-content-end mt-4">
@@ -34,9 +39,18 @@
         <a href="#" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
       </div>
     </div>
+    <div class="row mt-5">
+      <div class="col">
+        <p class="font-golden">Áreas de práctica</p>
+      </div>
+    </div>
     <div class="row">
       <div class="col">
-
+        <ul class="list-inline" id="areas-de-practica">
+        <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
+          <li class="list-inline-item"><?php echo the_title() ?></li>
+        <?php endwhile ?>
+        </ul>
       </div>
     </div>
   </div>
