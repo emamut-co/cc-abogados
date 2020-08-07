@@ -32,6 +32,7 @@ $ourTeamArray = new WP_Query(array(
         </ul>
       </div>
     </div>
+
     <div class="row mt-3">
       <div class="col-2">
         <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
@@ -66,11 +67,13 @@ $ourTeamArray = new WP_Query(array(
         <h3 class="subtitle">Nuestro equipo</h3>
       </div>
     </div>
+
     <div class="row mt-3">
       <div class="col-md-6">
         <p>C&C Abogados ofrece asesoramiento legal y defensa judicial. Analizamos el caso y buscamos la solución más adecuada para nuestros clientes.</p>
       </div>
     </div>
+
     <div class="row-cols-1 mt-3" id="our-team">
     <?php while($ourTeamArray->have_posts()): $ourTeamArray->the_post() ?>
       <div class="col mb-3">
@@ -89,6 +92,19 @@ $ourTeamArray = new WP_Query(array(
         </div>
       </div>
     <?php endwhile ?>
+    </div>
+
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <h3 class="subtitle">Áreas de práctica</h3>
+        <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
+      </div>
+      <div class="col-md-6">
+        <div class="row-col-1 row-col-2">
+        <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
+          <strong><?php echo the_title() ?></strong>
+        <?php endwhile ?>
+        </div>
     </div>
   </div>
 <?php get_footer() ?>

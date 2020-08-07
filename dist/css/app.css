@@ -26054,12 +26054,13 @@ h3 {
     border-color: #dee2e6;
   }
 }
-[v-cloak] {
-  display: none;
-}
-
 body {
   font-family: "Roboto", sans-serif;
+  margin-top: 5.5rem;
+}
+
+[v-cloak] {
+  display: none;
 }
 
 .font-golden {
