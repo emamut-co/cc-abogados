@@ -20,11 +20,29 @@ body
 [v-cloak]
   display: none
 
-.font-golden
+.bg-columns
+  background: url(../../images/bg-columns.png) no-repeat
+  background-size: 100%
+  background-position: top
+
+.bg-dark-blue
+  background-color: #3a4462
+
+.bg-dark-blue2
+  background-color: #2c3654
+
+.text-golden
   color: $golden !important
 
-.font-blue
+.text-blue
   color: $blue !important
+
+.font-merriweather
+  font-family: 'Merriweather', serif
+
+.btn-action
+  background-color: $golden
+  border-color: $golden
 
 #primary-menu
   .menu-item
@@ -42,11 +60,6 @@ body
         border-bottom: .5rem solid $golden
         color: $dark
 
-.bg-columns
-  background: url(../../images/bg-columns.png) no-repeat
-  background-size: 100%
-  background-position: top
-
 #social-icons
   li
     &:not(:last-child)
@@ -57,10 +70,6 @@ body
 .main-title, .main-subtitle
   font-family: 'Merriweather', serif
   font-weight: 300
-
-.btn-action
-  background-color: $golden
-  border-color: $golden
 
 #areas-de-practica
   li
@@ -76,7 +85,17 @@ body
     border-left: .4rem solid $golden
     margin-right: .5rem
 
-#our-team
+#areas-identifier
+  background: url(../../images/bg-areas.png) no-repeat
+  background-position-y: bottom
+
+#areas-list
+  ul
+    list-style-type: none
+  li
+    margin-top: .25rem
+
+#cases
   .card
-    .card-title
-      font-family: 'Merriweather', serif
+    border: none
+    border-left: .2rem solid $golden
