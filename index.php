@@ -8,6 +8,11 @@ $areasArray = new WP_Query(array(
 $ourTeamArray = new WP_Query(array(
   'post_type' => 'nuestro-equipo',
   'post_status' => 'publish'
+));
+
+$casesArray = new WP_Query(array(
+  'post_type' => 'casos',
+  'post_status' => 'publish'
 )); ?>
 
   <div class="container mx-auto">
@@ -93,22 +98,53 @@ $ourTeamArray = new WP_Query(array(
       </div>
     <?php endwhile ?>
     </div>
-
-    <div class="row mt-3" id="areas-identifier">
-      <div class="col-md-6">
-        <h3 class="subtitle">Áreas de práctica</h3>
-        <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
-      </div>
-      <div class="col-md-6">
-        <div class="row row-cols-1 row-cols-md-2" id="areas-list">
-        <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-          <div class="card border-0 mb-3">
-            <div class="card-body p-0">
-              <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
-              <p class="pl-2"><?php the_content() ?></p>
+  </div>
+  <div class="row mt-3" id="areas-identifier">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="subtitle">Áreas de práctica</h3>
+          <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row row-cols-1 row-cols-md-2" id="areas-list">
+          <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
+            <div class="card border-0 mb-3">
+              <div class="card-body p-0">
+                <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
+                <p class="pl-2"><?php the_content() ?></p>
+              </div>
             </div>
+          <?php endwhile ?>
           </div>
-        <?php endwhile ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3" id="cases">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="subtitle">Casos</h3>
+          <p class="mt-3">La confianza de nuestros clientes se refleja en los resultados.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="row row-cols-1 row-cols-md-2">
+            <?php while($casesArray->have_posts()): $casesArray->the_post() ?>
+              <div class="col mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title font-golden"><?php the_title() ?></h5>
+                    <p class="card-text"><?php the_excerpt() ?></p>
+                    <a href="<?php echo the_permalink() ?>" class="card-text mt-3 font-golden">
+                      <img src="<?php echo get_template_directory_uri() ?>/images/arrow-right.png" alt="" class="img-fluid"> Leer más
+                    </a>
+                  </div>
+                </div>
+              </div>
+            <?php endwhile ?>
+          </div>
         </div>
       </div>
     </div>
