@@ -76,7 +76,7 @@ $ourTeamArray = new WP_Query(array(
 
     <div class="row-cols-1 mt-3" id="our-team">
     <?php while($ourTeamArray->have_posts()): $ourTeamArray->the_post() ?>
-      <div class="col mb-3">
+      <div class="col mb-4">
         <div class="card border-0">
           <div class="row no-gutters">
             <div class="col-md-3 rounded-lg">
@@ -94,17 +94,24 @@ $ourTeamArray = new WP_Query(array(
     <?php endwhile ?>
     </div>
 
-    <div class="row mt-3">
+    <div class="row mt-3" id="areas-identifier">
       <div class="col-md-6">
         <h3 class="subtitle">Áreas de práctica</h3>
         <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
       </div>
       <div class="col-md-6">
-        <div class="row-col-1 row-col-2">
+        <div class="row row-cols-1 row-cols-md-2" id="areas-list">
         <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-          <strong><?php echo the_title() ?></strong>
+          <div class="card border-0 mb-3">
+            <div class="card-body p-0">
+              <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
+              <p class="pl-2"><?php the_content() ?></p>
+            </div>
+          </div>
         <?php endwhile ?>
         </div>
+      </div>
     </div>
   </div>
+
 <?php get_footer() ?>
