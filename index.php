@@ -43,8 +43,8 @@ $casesArray = new WP_Query(array(
         <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
       </div>
       <div class="col-md-6">
-        <h2 class="main-title font-blue">Compromiso y experiencia</h2>
-        <h3 class="main-subtitle font-golden">al servicio de tu caso</h3>
+        <h2 class="main-title text-blue">Compromiso y experiencia</h2>
+        <h3 class="main-subtitle text-golden">al servicio de tu caso</h3>
         <p class="mt-3">Si necesitas asesoría en tus conflictos, nuestro equipo jurídico está aquí para ayudarte.</p>
 
         <a href="#" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
@@ -53,7 +53,7 @@ $casesArray = new WP_Query(array(
 
     <div class="row mt-5">
       <div class="col">
-        <p class="font-golden">Áreas de práctica</p>
+        <p class="text-golden">Áreas de práctica</p>
       </div>
     </div>
 
@@ -89,7 +89,7 @@ $casesArray = new WP_Query(array(
             </div>
             <div class="col-md-9">
               <div class="card-body">
-                <h5 class="card-title font-golden"><?php echo the_title() ?></h5>
+                <h5 class="card-title font-merriweather text-golden"><?php echo the_title() ?></h5>
                 <p class="card-text"><?php the_content() ?></p>
               </div>
             </div>
@@ -125,19 +125,19 @@ $casesArray = new WP_Query(array(
   <div class="row mt-3" id="cases">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
           <h3 class="subtitle">Casos</h3>
           <p class="mt-3">La confianza de nuestros clientes se refleja en los resultados.</p>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
           <div class="row row-cols-1 row-cols-md-2">
             <?php while($casesArray->have_posts()): $casesArray->the_post() ?>
               <div class="col mb-4">
                 <div class="card">
                   <div class="card-body">
-                    <h5 class="card-title font-golden"><?php the_title() ?></h5>
+                    <h5 class="card-title font-merriweather text-golden"><?php the_title() ?></h5>
                     <p class="card-text"><?php the_excerpt() ?></p>
-                    <a href="<?php echo the_permalink() ?>" class="card-text mt-3 font-golden">
+                    <a href="<?php echo the_permalink() ?>" class="card-text mt-3 text-golden">
                       <img src="<?php echo get_template_directory_uri() ?>/images/arrow-right.png" alt="" class="img-fluid"> Leer más
                     </a>
                   </div>

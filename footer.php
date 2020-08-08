@@ -1,3 +1,50 @@
+      <div class="row mt-3 py-5 bg-dark-blue">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="text-golden font-merriweather">ESTAMOS AQUÍ PARA AYUDAR.</h2>
+              <p class="text-white">Contáctanos para resolver tus inquietudes.</p>
+              <p class="mt-4 text-white">Si no puedes visitarnos en nuestra oficina, podemos atenderte a través de videollamada.</p>
+            </div>
+            <div class="col-md-6">
+              <?php echo do_shortcode('[contact-form-7 id="42" title="Contact form 1"]') ?>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row py-4 bg-dark-blue2">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="media">
+                <img src="<?php echo get_template_directory_uri() ?>/images/ico-location.png" alt="" class="mr-3">
+                <div class="media-body text-white">
+                  <p>Av. Naciones Unidas E2-30 y Núñez de Vela Edificio Metropolitan, piso 4, oficina 407</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="media">
+                <img src="<?php echo get_template_directory_uri() ?>/images/ico-phone.png" alt="" class="mr-3">
+                <div class="media-body text-white">
+                  <p>098 489 5903</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="media">
+                <img src="<?php echo get_template_directory_uri() ?>/images/ico-share.png" alt="" class="mr-3">
+                <div class="media-body">
+                  <a href="#"><i class="fab fa-facebook-f text-white ml-4"></i></a>
+                  <a href="#"><i class="fab fa-instagram text-white ml-4"></i></a>
+                  <a href="#"><i class="fab fa-linkedin text-white ml-4"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
   <?php wp_footer(); ?>
