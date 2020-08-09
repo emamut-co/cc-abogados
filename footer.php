@@ -39,6 +39,7 @@
                   <a href="#"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
                   <a href="#"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
                   <a href="#"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a>
+                  <a href="#"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
                 </div>
               </div>
             </div>
