@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h2 class="text-golden font-merriweather">ESTAMOS AQUÍ PARA AYUDAR.</h2>
+              <h3 class="text-golden font-merriweather">ESTAMOS AQUÍ PARA AYUDAR.</h3>
               <p class="text-white">Contáctanos para resolver tus inquietudes.</p>
               <p class="mt-4 text-white">Si no puedes visitarnos en nuestra oficina, podemos atenderte a través de videollamada.</p>
             </div>
@@ -36,9 +36,10 @@
               <div class="media">
                 <img src="<?php echo get_template_directory_uri() ?>/images/ico-share.png" alt="" class="mr-3">
                 <div class="media-body">
-                  <a href="#"><i class="fab fa-facebook-f text-white ml-4"></i></a>
-                  <a href="#"><i class="fab fa-instagram text-white ml-4"></i></a>
-                  <a href="#"><i class="fab fa-linkedin text-white ml-4"></i></a>
+                  <a href="#"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
+                  <a href="#"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
+                  <a href="#"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a>
+                  <a href="#"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
                 </div>
               </div>
             </div>

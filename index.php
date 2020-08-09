@@ -34,6 +34,11 @@ $casesArray = new WP_Query(array(
               <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
           </li>
+          <li class="list-inline-item px-3">
+            <a href="#" class="mr-3">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -82,7 +87,7 @@ $casesArray = new WP_Query(array(
     <div class="row-cols-1 mt-3" id="our-team">
     <?php while($ourTeamArray->have_posts()): $ourTeamArray->the_post() ?>
       <div class="col mb-4">
-        <div class="card border-0">
+        <div class="card border-0 bg-transparent">
           <div class="row no-gutters">
             <div class="col-md-3 rounded-lg">
               <?php the_post_thumbnail('full', ['class' => 'card-img']) ?>
@@ -133,7 +138,7 @@ $casesArray = new WP_Query(array(
           <div class="row row-cols-1 row-cols-md-2">
             <?php while($casesArray->have_posts()): $casesArray->the_post() ?>
               <div class="col mb-4">
-                <div class="card">
+                <div class="card rounded-0">
                   <div class="card-body">
                     <h5 class="card-title font-merriweather text-golden"><?php the_title() ?></h5>
                     <p class="card-text"><?php the_excerpt() ?></p>
