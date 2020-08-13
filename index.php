@@ -5,10 +5,10 @@ $areasArray = new WP_Query(array(
   'post_status' => 'publish'
 ));
 
-$ourTeamArray = new WP_Query(array(
-  'post_type' => 'nuestro-equipo',
-  'post_status' => 'publish'
-));
+$usersArray = get_users( array(
+  'meta_key'    => 'sticky',
+  'meta_value'  => 1
+) );
 
 $casesArray = new WP_Query(array(
   'post_type' => 'casos',
@@ -85,28 +85,35 @@ $casesArray = new WP_Query(array(
     </div>
 
     <div class="row-cols-1 mt-3" id="our-team">
-    <?php while($ourTeamArray->have_posts()): $ourTeamArray->the_post() ?>
+    <?php foreach($usersArray as $user): ?>
       <div class="col mb-4">
         <div class="card border-0 bg-transparent">
           <div class="row no-gutters">
             <div class="col-md-3 rounded-lg">
-              <?php the_post_thumbnail('full', ['class' => 'card-img']) ?>
+              <img class="card-img" src="<?php echo get_avatar_url( $user->ID ) ?>" alt="">
             </div>
             <div class="col-md-9">
               <div class="card-body">
-                <h5 class="card-title font-merriweather text-golden"><?php echo the_title() ?></h5>
-                <p class="card-text"><?php the_content() ?></p>
+                <h5 class="card-title font-merriweather text-golden"><?php echo $user->display_name ?></h5>
+                <div class="row">
+                  <div class="col-md-6">
+                    <?php echo get_user_meta($user->ID, 'description', true) ?>
+                  </div>
+                  <div class="col-md-6">
+                    <?php echo get_field('works', 'user_' . $user->ID) ?>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <?php endwhile ?>
+    <?php endforeach ?>
     </div>
   </div>
   <div class="row mt-3" id="areas-identifier">
     <div class="container">
-      <div class="row">
+      <div class="row mt-5">
         <div class="col-md-6">
           <h3 class="subtitle">Áreas de práctica</h3>
           <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
