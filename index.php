@@ -101,6 +101,7 @@ $casesArray = new WP_Query(array(
                   </div>
                   <div class="col-md-6">
                     <?php echo get_field('works', 'user_' . $user->ID) ?>
+                    <a href="mailto:<?php echo $user->user_email ?>" class="text-golden"><i class="far fa-envelope"></i> Contáctese con <?php echo get_user_meta($user->ID, 'first_name', true) ?></a>
                   </div>
                 </div>
               </div>
