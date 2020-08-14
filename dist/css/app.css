@@ -26085,7 +26085,10 @@ body {
   font-weight: 300;
 }
 
-#areas-de-practica li {
+#areas-de-practica {
+  border-bottom: 1px solid #B7884B;
+}
+#areas-de-practica li:not(:last-child) {
   border-right: 1px solid #d2d2d2;
   padding-right: 0.6rem;
   font-size: 0.9rem;
