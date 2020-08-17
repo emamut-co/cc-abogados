@@ -63,7 +63,7 @@ $casesArray = new WP_Query(array(
     </div>
 
     <div class="row">
-      <div class="col" id="areas-de-practica">
+      <div class="col border-bottom-golden" id="areas-de-practica">
         <ul class="list-inline">
         <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
           <li class="list-inline-item"><?php echo the_title() ?></li>

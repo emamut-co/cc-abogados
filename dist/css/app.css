@@ -26061,6 +26061,14 @@ body {
   border-color: #B7884B;
 }
 
+.border-bottom-golden {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-bottom: 1px solid #B7884B;
+}
+
 #primary-menu .menu-item {
   margin-right: 0.5rem;
 }
@@ -26085,9 +26093,6 @@ body {
   font-weight: 300;
 }
 
-#areas-de-practica {
-  border-bottom: 1px solid #B7884B;
-}
 #areas-de-practica li:not(:last-child) {
   border-right: 1px solid #d2d2d2;
   padding-right: 0.6rem;
