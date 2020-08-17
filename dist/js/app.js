@@ -32343,6 +32343,27 @@ window.$ = __webpack_provided_window_dot_jQuery = jquery__WEBPACK_IMPORTED_MODUL
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app'
 });
+jquery__WEBPACK_IMPORTED_MODULE_2___default()(function () {
+  if (jquery__WEBPACK_IMPORTED_MODULE_2___default()(window).width() > 768) window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    var transition = 'width 200ms ease-in-out, height 200ms ease-in-out';
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('#logo').css({
+        width: '70%',
+        transition: transition
+      });
+    } else {
+      jquery__WEBPACK_IMPORTED_MODULE_2___default()('#logo').css({
+        width: '100%',
+        transition: transition
+      });
+    }
+  }
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
