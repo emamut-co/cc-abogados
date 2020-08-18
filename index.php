@@ -1,8 +1,9 @@
 <?php get_header();
 
 $areasArray = new WP_Query(array(
-  'post_type' => 'areas-de-practica',
-  'post_status' => 'publish'
+  'post_type'       => 'areas-de-practica',
+  'post_status'     => 'publish',
+  'posts_per_page'  => -1
 ));
 
 $usersArray = get_users( array(
@@ -11,8 +12,9 @@ $usersArray = get_users( array(
 ) );
 
 $casesArray = new WP_Query(array(
-  'post_type' => 'casos',
-  'post_status' => 'publish'
+  'post_type'       => 'casos',
+  'post_status'     => 'publish',
+  'posts_per_page'  => 4
 )); ?>
 
   <div class="container mx-auto">

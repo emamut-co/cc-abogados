@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <div class="row">
   <div class="container">
     <?php while (have_posts()) : the_post(); ?>
@@ -8,9 +9,15 @@
           <div class="col-md-4">
             <?php the_post_thumbnail(array(450), array('class' => 'card-img')) ?>
           </div>
-          <div class="col-md-8 pl-3">
+          <div class="col pl-3">
             <a class="font-merriweather text-golden" href="<?php echo the_permalink() ?>"><h3 class="card-title"><?php echo the_title() ?></h3></a>
             <p><?php echo the_excerpt() ?></p>
+            <div class="row mt-5">
+              <div class="col-6">
+                <span class="text-muted"><?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?></span>
+              </div>
+              <div class="col-6"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -23,5 +30,5 @@
     </div>
   </div>
 </div>
-<?php get_footer() ?>
 
+<?php get_footer() ?>

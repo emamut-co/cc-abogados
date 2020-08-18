@@ -82,7 +82,7 @@ function emamut_numeric_posts_nav() {
 
   /** Previous Post Link */
   if ( get_previous_posts_link() )
-    printf( '<li class="page-item mt-2">%s</li>' . "\n", get_previous_posts_link('<i class="fas fa-chevron-left"></i> PREVIAS') );
+    printf( '<li class="page-item mt-2">%s</li>' . "\n", get_previous_posts_link('<i class="fas fa-chevron-left"></i> ANTERIORES') );
 
   /** Link to first page, plus ellipses if necessary */
   if ( ! in_array( 1, $links ) ) {
@@ -116,3 +116,29 @@ function emamut_numeric_posts_nav() {
 
   echo '</ul></nav>' . "\n";
 }
+
+function reading_time() {
+  $content = get_post_field( 'post_content', $post->ID );
+  $word_count = str_word_count( strip_tags( $content ) );
+  $readingtime = ceil( $word_count / 200 );
+
+  $totalreadingtime = $readingtime . ' min de lectura';
+
+  return $totalreadingtime;
+}
+
+function add_responsive_class($content){
+  $content = mb_convert_encoding($content, 'HTML-ENTITIES', "UTF-8");
+  $document = new DOMDocument();
+  libxml_use_internal_errors(true);
+  $document->loadHTML(utf8_decode($content));
+
+  $imgs = $document->getElementsByTagName('img');
+  foreach ($imgs as $img) {
+      $img->setAttribute('class','img-fluid');
+  }
+
+  $html = $document->saveHTML();
+  return $html;
+}
+add_filter ('the_content', 'add_responsive_class');

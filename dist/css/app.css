@@ -26129,4 +26129,22 @@ body {
   border: none;
   border-left: 1px solid #B7884B;
 }
+
+ul.pagination .page-item {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+ul.pagination .page-item.active a {
+  background-color: #B7884B;
+  border-color: #B7884B;
+}
+ul.pagination .page-item a {
+  border-color: #000;
+  color: #000;
+}
+
+#post-author-section {
+  border-left: 0.4rem solid #B7884B;
+  margin-right: 0.5rem;
+}
 /*# sourceMappingURL=app.css.map*/
