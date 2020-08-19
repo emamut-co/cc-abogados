@@ -26090,6 +26090,7 @@ body {
 #primary-menu .menu-item a {
   font-family: "Times New Roman", serif;
   font-weight: normal;
+  font-size: 1.2rem;
 }
 #primary-menu .menu-item.active a {
   border-bottom: 0.5rem solid #B7884B;
