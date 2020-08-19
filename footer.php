@@ -2,7 +2,7 @@
         <div class="container">
           <div class="row">
             <div class="col-md-6">
-              <h3 class="text-golden font-merriweather">ESTAMOS AQUÍ PARA AYUDAR.</h3>
+              <h3 class="text-golden font-times">ESTAMOS AQUÍ PARA AYUDAR.</h3>
               <p class="text-white">Contáctanos para resolver tus inquietudes.</p>
               <p class="mt-4 text-white">Si no puedes visitarnos en nuestra oficina, podemos atenderte a través de videollamada.</p>
             </div>
