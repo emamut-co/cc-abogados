@@ -23,6 +23,11 @@ function my_theme_register_required_plugins()
       'required'  => true
     ),
     array(
+      'name'      => 'WP User Avatar',
+      'slug'      => 'wp-user-avatar',
+      'required'  => true
+    ),
+    array(
       'name'      => 'Post Types Order',
       'slug'      => 'post-types-order',
       'required'  => true
