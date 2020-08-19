@@ -26147,4 +26147,9 @@ ul.pagination .page-item a {
   border-left: 0.4rem solid #B7884B;
   margin-right: 0.5rem;
 }
+
+.sidebar-title {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
 /*# sourceMappingURL=app.css.map*/

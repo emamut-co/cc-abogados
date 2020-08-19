@@ -18,7 +18,7 @@ $casesArray = new WP_Query(array(
 )); ?>
 
   <div class="container mx-auto">
-    <div class="row justify-content-end mt-4">
+    <div class="row justify-content-end mt-5 pt-3">
       <div class="col text-right">
         <ul class="list-inline" id="social-icons">
           <li class="list-inline-item px-3">

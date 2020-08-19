@@ -1,4 +1,4 @@
-      <div class="row mt-3 py-5 bg-dark-blue">
+      <div class="row mt-3 py-5 bg-dark-blue" id="contact-form">
         <div class="container">
           <div class="row">
             <div class="col-md-6">

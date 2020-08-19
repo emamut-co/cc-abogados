@@ -16,7 +16,9 @@
               <div class="col-6">
                 <span class="text-muted"><?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?></span>
               </div>
-              <div class="col-6"></div>
+              <div class="col-6">
+                <span class="text-muted">Compartir: <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?></span>
+              </div>
             </div>
           </div>
         </div>

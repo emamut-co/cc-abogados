@@ -21,8 +21,11 @@
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col">
+          <div class="col-6">
             <span class="text-muted"><?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?></span>
+          </div>
+          <div class="col-6">
+            <span class="text-muted">Compartir: <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?></span>
           </div>
         </div>
         <div class="row mt-4">
@@ -32,7 +35,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <h5 class="mb-3">Últimas publicaciones</h5>
+        <h5 class="mb-3 sidebar-title py-3">Últimas publicaciones</h5>
         <?php $mostViewedArray = new WP_Query(
           array(
             'cat'         => $categories[0]->cat_ID,
@@ -43,7 +46,7 @@
           )
         );?>
 
-        <div class="list-group">
+        <div class="list-group list-group-flush">
         <?php while ( $mostViewedArray->have_posts() ): $mostViewedArray->the_post() ?>
           <a class="list-group-item list-group-item-action bg-transparent" href="<?php the_permalink() ?>"><h6><?php the_title() ?></h6></a>
         <?php endwhile ?>
