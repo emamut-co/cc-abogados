@@ -1,4 +1,5 @@
-$fa-font-path: '../webfonts'
+$fa-font-path: '../../fonts/vendor/@fortawesome/fontawesome-free' !default
+// $font-path: '../../fonts/Times New Roman'
 
 @import '~bootstrap/scss/bootstrap'
 
@@ -7,16 +8,26 @@ $fa-font-path: '../webfonts'
 @import '~@fortawesome/fontawesome-free/scss/regular'
 @import '~@fortawesome/fontawesome-free/scss/solid'
 
+
 @import "~bootstrap/scss/bootstrap"
 
 @import 'colors'
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap')
+
+@font-face
+  font-family: 'Times New Roman', Times, serif
+  src: url('fonts/times-new-roman')
+
+html
+  scroll-behavior: smooth
 
 body
   font-family: 'Roboto', sans-serif
   margin-top: 5.5rem
   position: relative
+  color: #676767
+  font-weight: 300
 
 [v-cloak]
   display: none
@@ -38,8 +49,8 @@ body
 .text-blue
   color: $blue !important
 
-.font-merriweather
-  font-family: 'Merriweather', serif
+.font-times
+  font-family: 'Times New Roman', serif
 
 .btn-action
   background-color: $golden
@@ -59,7 +70,7 @@ body
     //   content: '\00B7'
     //   margin-left: 1rem
     a
-      font-family: 'Merriweather', serif
+      font-family: 'Times New Roman', serif
       font-weight: normal
       // margin-left: auto
       // margin-right: auto
@@ -76,7 +87,7 @@ body
       color: $golden
 
 .main-title, .main-subtitle
-  font-family: 'Merriweather', serif
+  font-family: 'Times New Roman', serif
   font-weight: 300
 
 #areas-de-practica
@@ -86,7 +97,7 @@ body
     font-size: .9rem
 
 .subtitle
-  font-family: 'Merriweather', serif
+  font-family: 'Times New Roman', serif
   color: $golden
   &::before
     content: ''

@@ -5,7 +5,7 @@
     while (have_posts()) : the_post(); $author_id = get_the_author_meta( 'ID' ); $categories = get_the_category(); ?>
     <div class="row mt-5 pt-4">
       <div class="col-md-8">
-        <h1 class="font-merriweather text-golden"><?php the_title() ?></h1>
+        <h1 class="font-times text-golden"><?php the_title() ?></h1>
         <p class="text-muted"><?php The_excerpt() ?></p>
         <?php if ( has_post_thumbnail() ):
           the_post_thumbnail('large', array('class' => 'img-fluid'));
@@ -15,7 +15,7 @@
             <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid rounded-circle border-left">
           </div>
           <div class="col">
-            <h4 class="text-golden font-merriweather">
+            <h4 class="text-golden font-times">
               <?php echo get_the_author_meta( 'display_name', $author_id ); ?>
             </h4>
           </div>
