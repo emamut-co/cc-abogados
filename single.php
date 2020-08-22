@@ -6,7 +6,7 @@
     <div class="row mt-5 pt-4">
       <div class="col-md-8">
         <h1 class="font-times text-golden"><?php the_title() ?></h1>
-        <p class="text-muted"><?php The_excerpt() ?></p>
+        <!-- <p class="text-muted"><?php The_excerpt() ?></p> -->
         <?php if ( has_post_thumbnail() ):
           the_post_thumbnail('large', array('class' => 'img-fluid'));
         endif ?>
