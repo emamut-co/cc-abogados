@@ -54,7 +54,7 @@ $casesArray = new WP_Query(array(
         <h3 class="main-subtitle text-golden">al servicio de tu caso</h3>
         <p class="mt-3">Si necesitas asesoría en tus conflictos, nuestro equipo jurídico está aquí para ayudarte.</p>
 
-        <a href="#" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
+        <a href="#contact-form" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
       </div>
     </div>
 
