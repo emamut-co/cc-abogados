@@ -31,6 +31,11 @@ function my_theme_register_required_plugins()
       'name'      => 'Post Types Order',
       'slug'      => 'post-types-order',
       'required'  => true
+    ),
+    array(
+      'name'      => 'Social Share Buttons by Supsystic',
+      'slug'      => 'supsystic-social-sharing',
+      'required'  => true
     )
 
   );
