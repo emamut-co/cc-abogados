@@ -22,22 +22,22 @@ $casesArray = new WP_Query(array(
       <div class="col text-right">
         <ul class="list-inline" id="social-icons">
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://www.facebook.com/CCAbogadosEC" target="_blank" class="mr-3">
               <i class="fab fa-facebook-f fa-lg"></i>
             </a>
           </li>
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://www.instagram.com/abogados_cc/" target="_blank" class="mr-3">
               <i class="fab fa-instagram fa-lg"></i>
             </a>
           </li>
-          <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+          <!-- <li class="list-inline-item px-3">
+            <a href="#" target="_blank" class="mr-3">
               <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
-          </li>
+          </li> -->
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://twitter.com/abogados_cc" target="_blank" class="mr-3">
               <i class="fab fa-twitter fa-lg"></i>
             </a>
           </li>
