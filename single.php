@@ -10,7 +10,7 @@
         <?php if ( has_post_thumbnail() ):
           the_post_thumbnail('large', array('class' => 'img-fluid'));
         endif ?>
-        <div class="row mt-5">
+        <div class="row my-5 pb-2">
           <div class="col-md-2">
             <div id="post-author-section">
               <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid border-left" style="border-radius: 3rem;">
