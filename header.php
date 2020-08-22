@@ -9,5 +9,5 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <div id="app" class="container-fluid bg-columns" v-cloak>
+    <div id="app" class="container-fluid bg-columns" style="background: url(<?php echo get_template_directory_uri() ?>/images/bg-columns.png) no-repeat" v-cloak>
       <?php get_template_part( 'partials/menu', 'template' ); ?>
