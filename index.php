@@ -114,7 +114,7 @@ $casesArray = new WP_Query(array(
     <?php endforeach ?>
     </div>
   </div>
-  <div class="row mt-3" id="areas-identifier">
+  <div class="row mt-3" id="areas-identifier" style="background: url(<?php echo get_template_directory_uri() ?>/images/bg-areas.png) no-repeat">
     <div class="container">
       <div class="row mt-5">
         <div class="col-md-6">
