@@ -68,7 +68,7 @@ $casesArray = new WP_Query(array(
       <div class="col border-bottom-golden" id="areas-de-practica">
         <ul class="list-inline">
         <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-          <li class="list-inline-item"><?php echo the_title() ?></li>
+          <li class="list-inline-item"><a class="text-dark" href="#areas-identifier"><?php echo the_title() ?></a></li>
         <?php endwhile ?>
         </ul>
       </div>
