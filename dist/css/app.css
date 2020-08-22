@@ -26078,6 +26078,10 @@ body {
   border-bottom: 1px solid #B7884B;
 }
 
+.border-left-golden {
+  border-left: 0.1rem solid #B7884B;
+}
+
 .object-fit {
   -o-object-fit: cover;
      object-fit: cover;
