@@ -26130,9 +26130,12 @@ body {
 
 #areas-list ul {
   list-style-type: none;
+  -webkit-padding-start: 0.8rem;
+          padding-inline-start: 0.8rem;
 }
 #areas-list li {
   margin-top: 0.25rem;
+  line-height: 16px;
 }
 
 .our-team .card-img {
