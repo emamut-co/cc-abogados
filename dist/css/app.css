@@ -26080,6 +26080,7 @@ body {
 
 .border-left-golden {
   border-left: 1px solid #B7884B;
+  padding-left: 2rem;
 }
 
 .object-fit {
