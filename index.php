@@ -46,7 +46,7 @@ $casesArray = new WP_Query(array(
     </div>
 
     <div class="row mt-3">
-      <div class="col-2">
+      <div class="col-6 col-md-2 d-none d-md-block">
         <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
       </div>
       <div class="col-md-6">
