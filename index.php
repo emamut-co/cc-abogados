@@ -86,7 +86,7 @@ $casesArray = new WP_Query(array(
       </div>
     </div>
 
-    <div class="row-cols-1 mt-3" id="our-team">
+    <div class="row-cols-1 mt-3 border-bottom-golden pb-3" id="our-team">
     <?php foreach($usersArray as $user): ?>
       <div class="col mb-4">
         <div class="card border-0 bg-transparent">
