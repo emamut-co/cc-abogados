@@ -13,7 +13,7 @@
         <div class="row mt-5">
           <div class="col-md-2">
             <div id="post-author-section">
-              <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid rounded-pill border-left">
+              <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid border-left" style="border-radius: 3rem;">
             </div>
           </div>
           <div class="col">
