@@ -11,26 +11,26 @@
           the_post_thumbnail('large', array('class' => 'img-fluid'));
         endif ?>
         <div class="row mt-5">
-          <div class="col-md-2" id="post-author-section">
-            <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid rounded-circle border-left">
+          <div class="col-md-2">
+            <div id="post-author-section">
+              <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid rounded-pill border-left">
+            </div>
           </div>
           <div class="col">
             <h4 class="text-golden font-times">
               <?php echo get_the_author_meta( 'display_name', $author_id ); ?>
             </h4>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col-6">
-            <span class="text-muted"><?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?></span>
-          </div>
-          <div class="col-6">
-            <span class="text-muted">Compartir: <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?></span>
-          </div>
-        </div>
-        <div class="row mt-4">
-          <div class="col">
-            <?php the_content(); ?>
+            <div class="mt-4 d-flex justify-content-between">
+              <span class="text-muted">
+                <?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?>
+              </span>
+              <span class="text-muted">
+                Compartir: <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?>
+              </span>
+            </div>
+            <div class="mt-5">
+              <?php the_content(); ?>
+            </div>
           </div>
         </div>
       </div>
