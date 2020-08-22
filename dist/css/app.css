@@ -26188,4 +26188,11 @@ ul.pagination .page-item a {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
+
+@media (max-width: 767px) {
+  .border-left-golden {
+    border-left: none;
+    padding-left: 15px;
+  }
+}
 /*# sourceMappingURL=app.css.map*/
