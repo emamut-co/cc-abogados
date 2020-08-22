@@ -128,10 +128,12 @@ $casesArray = new WP_Query(array(
         <div class="col-md-6">
           <div class="row row-cols-1 row-cols-md-2" id="areas-list">
           <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-            <div class="card border-0 pr-5 mb-3 bg-transparent">
-              <div class="card-body p-0">
-                <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
-                <p class="pl-2"><?php the_content() ?></p>
+            <div class="col">
+              <div class="card border-0 pr-5 mb-3 bg-transparent">
+                <div class="card-body p-0">
+                  <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
+                  <p class="pl-2"><?php the_content() ?></p>
+                </div>
               </div>
             </div>
           <?php endwhile ?>
