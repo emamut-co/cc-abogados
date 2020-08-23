@@ -7,7 +7,7 @@
       <div class="card bg-transparent border-bottom-golden pb-4 mb-4">
         <div class="row no-gutters">
           <div class="col-md-3">
-            <?php the_post_thumbnail(array(450), array('class' => 'card-img object-fit')) ?>
+            <?php the_post_thumbnail(array(450), array('class' => 'card-img object-fit pb-sm-3 pb-0')) ?>
           </div>
           <div class="col pl-3">
             <a class="font-times text-golden" href="<?php echo the_permalink() ?>"><h3 class="card-title"><?php echo the_title() ?></h3></a>
