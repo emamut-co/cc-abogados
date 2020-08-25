@@ -26078,6 +26078,11 @@ body {
   border-bottom: 1px solid #B7884B;
 }
 
+.border-left-golden {
+  border-left: 1px solid #B7884B;
+  padding-left: 2rem;
+}
+
 .object-fit {
   -o-object-fit: cover;
      object-fit: cover;
@@ -26108,10 +26113,12 @@ body {
   font-weight: 300;
 }
 
+#areas-de-practica li {
+  font-size: 0.9rem;
+}
 #areas-de-practica li:not(:last-child) {
   border-right: 1px solid #d2d2d2;
   padding-right: 0.6rem;
-  font-size: 0.9rem;
 }
 
 .subtitle {
@@ -26130,9 +26137,12 @@ body {
 
 #areas-list ul {
   list-style-type: none;
+  -webkit-padding-start: 0.8rem;
+          padding-inline-start: 0.8rem;
 }
 #areas-list li {
   margin-top: 0.25rem;
+  line-height: 16px;
 }
 
 .our-team .card-img {
@@ -26177,5 +26187,12 @@ ul.pagination .page-item a {
   color: #8f989e !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
+}
+
+@media (max-width: 767px) {
+  .border-left-golden {
+    border-left: none;
+    padding-left: 15px;
+  }
 }
 /*# sourceMappingURL=app.css.map*/

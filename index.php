@@ -22,22 +22,22 @@ $casesArray = new WP_Query(array(
       <div class="col text-right">
         <ul class="list-inline" id="social-icons">
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://www.facebook.com/CCAbogadosEC" target="_blank" class="mr-3">
               <i class="fab fa-facebook-f fa-lg"></i>
             </a>
           </li>
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://www.instagram.com/abogados_cc/" target="_blank" class="mr-3">
               <i class="fab fa-instagram fa-lg"></i>
             </a>
           </li>
-          <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+          <!-- <li class="list-inline-item px-3">
+            <a href="#" target="_blank" class="mr-3">
               <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
-          </li>
+          </li> -->
           <li class="list-inline-item px-3">
-            <a href="#" class="mr-3">
+            <a href="https://twitter.com/abogados_cc" target="_blank" class="mr-3">
               <i class="fab fa-twitter fa-lg"></i>
             </a>
           </li>
@@ -46,7 +46,7 @@ $casesArray = new WP_Query(array(
     </div>
 
     <div class="row mt-3">
-      <div class="col-2">
+      <div class="col-6 col-md-2 d-none d-md-block">
         <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
       </div>
       <div class="col-md-6">
@@ -54,7 +54,7 @@ $casesArray = new WP_Query(array(
         <h3 class="main-subtitle text-golden">al servicio de tu caso</h3>
         <p class="mt-3">Si necesitas asesoría en tus conflictos, nuestro equipo jurídico está aquí para ayudarte.</p>
 
-        <a href="#" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
+        <a href="#contact-form" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
       </div>
     </div>
 
@@ -68,7 +68,7 @@ $casesArray = new WP_Query(array(
       <div class="col border-bottom-golden" id="areas-de-practica">
         <ul class="list-inline">
         <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-          <li class="list-inline-item"><?php echo the_title() ?></li>
+          <li class="list-inline-item"><a class="text-dark" href="#areas-identifier"><?php echo the_title() ?></a></li>
         <?php endwhile ?>
         </ul>
       </div>
@@ -86,7 +86,7 @@ $casesArray = new WP_Query(array(
       </div>
     </div>
 
-    <div class="row-cols-1 mt-3" id="our-team">
+    <div class="row-cols-1 mt-3 border-bottom-golden pb-3" id="our-team">
     <?php foreach($usersArray as $user): ?>
       <div class="col mb-4">
         <div class="card border-0 bg-transparent">
@@ -119,15 +119,21 @@ $casesArray = new WP_Query(array(
       <div class="row mt-5">
         <div class="col-md-6">
           <h3 class="subtitle">Áreas de práctica</h3>
-          <p class="mt-3">C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
+          <div class="row mt-3">
+            <div class="col-md-9">
+              <p>C&C Abogados cuenta con un equipo de asesores legales en distintas ramas del derecho, para solventar sus dudas.</p>
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
           <div class="row row-cols-1 row-cols-md-2" id="areas-list">
           <?php while($areasArray->have_posts()): $areasArray->the_post() ?>
-            <div class="card border-0 mb-3">
-              <div class="card-body p-0">
-                <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
-                <p class="pl-2"><?php the_content() ?></p>
+            <div class="col">
+              <div class="card border-0 pr-5 mb-3 bg-transparent">
+                <div class="card-body p-0">
+                  <h6 class="card-title"><strong><?php echo the_title() ?></strong></h6>
+                  <p class="pl-2"><?php the_content() ?></p>
+                </div>
               </div>
             </div>
           <?php endwhile ?>
@@ -150,7 +156,7 @@ $casesArray = new WP_Query(array(
               <div class="col mb-4">
                 <div class="card rounded-0">
                   <div class="card-body">
-                    <h5 class="card-title font-times text-golden"><?php the_title() ?></h5>
+                    <a href="<?php echo the_permalink() ?>" class="card-title font-times text-golden"><h5><?php the_title() ?></h5></a>
                     <p class="card-text"><?php the_excerpt() ?></p>
                     <a href="<?php echo the_permalink() ?>" class="card-text mt-3 text-golden">
                       <img src="<?php echo get_template_directory_uri() ?>/images/arrow-right.png" alt="" class="img-fluid"> Leer más

@@ -61,6 +61,10 @@ body
   border-radius: 0
   border-bottom: 1px solid $golden
 
+.border-left-golden
+  border-left: 1px solid $golden
+  padding-left: 2rem
+
 .object-fit
   object-fit: cover
 
@@ -93,10 +97,11 @@ body
   font-weight: 300
 
 #areas-de-practica
-  li:not(:last-child)
-    border-right: 1px solid #d2d2d2
-    padding-right: .6rem
+  li
     font-size: .9rem
+    &:not(:last-child)
+      border-right: 1px solid #d2d2d2
+      padding-right: .6rem
 
 .subtitle
   font-family: 'Times New Roman', serif
@@ -112,8 +117,10 @@ body
 #areas-list
   ul
     list-style-type: none
+    padding-inline-start: .8rem
   li
     margin-top: .25rem
+    line-height: 16px
 
 .our-team
   .card-img
@@ -152,3 +159,5 @@ ul.pagination
     color: #8f989e !important
     padding-top: 0 !important
     padding-bottom: 0 !important
+
+@import 'responsive'

@@ -3,8 +3,12 @@
           <div class="row">
             <div class="col-md-6">
               <h3 class="text-golden font-times">ESTAMOS AQUÍ PARA AYUDAR.</h3>
-              <p class="text-white">Contáctanos para resolver tus inquietudes.</p>
-              <p class="mt-4 text-white">Si no puedes visitarnos en nuestra oficina, podemos atenderte a través de videollamada.</p>
+              <div class="row">
+                <div class="col-md-8" style="font-size: 1.05rem">
+                  <p class="text-white">Contáctanos para resolver tus inquietudes.</p>
+                  <p class="mt-4 text-white">Si no puedes visitarnos en nuestra oficina, podemos atenderte a través de videollamada.</p>
+                </div>
+              </div>
             </div>
             <div class="col-md-6">
               <?php echo do_shortcode('[contact-form-7 id="42" title="Contact form 1"]') ?>
@@ -20,11 +24,11 @@
               <div class="media">
                 <img src="<?php echo get_template_directory_uri() ?>/images/ico-location.png" alt="" class="mr-3">
                 <div class="media-body text-white">
-                  <p>Av. Naciones Unidas E2-30 y Núñez de Vela Edificio Metropolitan, piso 4, oficina 407</p>
+                  <p>Av. Naciones Unidas E2-30 y Núñez de Vela <br> Edificio Metropolitan, piso 4, oficina 407</p>
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 border-left-golden">
               <div class="media">
                 <img src="<?php echo get_template_directory_uri() ?>/images/ico-phone.png" alt="" class="mr-3">
                 <div class="media-body text-white">
@@ -32,14 +36,14 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 border-left-golden">
               <div class="media">
                 <img src="<?php echo get_template_directory_uri() ?>/images/ico-share.png" alt="" class="mr-3">
                 <div class="media-body">
-                  <a href="#"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
-                  <a href="#"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
-                  <a href="#"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a>
-                  <a href="#"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
+                  <a href="https://www.facebook.com/CCAbogadosEC" target="_blank"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
+                  <a href="https://twitter.com/abogados_cc" target="_blank"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
+                  <!-- <a href="#"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a> -->
+                  <a href="https://www.instagram.com/abogados_cc/" target="_blank"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
                 </div>
               </div>
             </div>
