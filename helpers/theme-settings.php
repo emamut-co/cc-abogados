@@ -29,7 +29,12 @@ function display_facebook()
 
 function display_linkedin()
 { ?>
-  <input name="linkedin" id="linkedin" placeholder="https://wa.me/" value="<?php echo get_option('linkedin'); ?>">
+  <input name="linkedin" id="linkedin" placeholder="https://www.linkedin.com/in/" value="<?php echo get_option('linkedin'); ?>">
+<?php }
+
+function display_twitter()
+{ ?>
+  <input name="twitter" id="twitter" placeholder="https://twitter.com/" value="<?php echo get_option('twitter'); ?>">
 <?php }
 
 function theme_settings()
@@ -39,9 +44,11 @@ function theme_settings()
   add_settings_field('facebook', 'Facebook', 'display_facebook', 'theme-options', 'first_section');
   add_settings_field('instagram', 'Instagram', 'display_instagram', 'theme-options', 'first_section');
   add_settings_field('linkedin', 'Linkedin', 'display_linkedin', 'theme-options', 'first_section');
+  add_settings_field('twitter', 'Twitter', 'display_twitter', 'theme-options', 'first_section');
 
   register_setting( 'theme-options-grp', 'facebook');
   register_setting( 'theme-options-grp', 'instagram');
   register_setting( 'theme-options-grp', 'linkedin');
+  register_setting( 'theme-options-grp', 'twitter');
 }
 add_action('admin_init', 'theme_settings');
