@@ -6,20 +6,26 @@
     <div class="row mt-5 pt-4">
       <div class="col-md-8">
         <h1 class="font-times text-golden"><?php the_title() ?></h1>
-        <p class="text-muted"><?php The_excerpt() ?></p>
-        <?php if ( has_post_thumbnail() ):
+        <?php if(! 'casos' == get_post_type()): ?>
+          <p class="text-muted"><?php The_excerpt() ?></p>
+        <?php endif;
+        if ( has_post_thumbnail() ):
           the_post_thumbnail('large', array('class' => 'img-fluid'));
         endif ?>
         <div class="row mt-5">
+          <?php if(! 'casos' == get_post_type()): ?>
           <div class="col-md-2">
             <div id="post-author-section">
               <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid border-left" style="border-radius: 3rem;">
             </div>
           </div>
+          <?php endif ?>
           <div class="col">
+            <?php if(! 'casos' == get_post_type()): ?>
             <h4 class="text-golden font-times">
               <?php echo get_the_author_meta( 'display_name', $author_id ); ?>
             </h4>
+            <?php endif ?>
             <div class="mt-4 d-flex justify-content-between">
               <span class="text-muted">
                 <?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?>
