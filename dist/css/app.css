@@ -26113,6 +26113,18 @@ body {
   font-weight: 300;
 }
 
+#main-carousel .carousel-caption {
+  left: 22rem;
+  bottom: 15rem;
+}
+#main-carousel .carousel-indicators li {
+  background-color: #3A4462;
+  height: 0.3rem;
+}
+#main-carousel .carousel-indicators .active {
+  background-color: #B7884B;
+}
+
 #areas-de-practica li {
   font-size: 0.9rem;
 }
