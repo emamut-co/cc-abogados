@@ -1,5 +1,11 @@
 <?php get_header();
 
+$sliderArray = new WP_Query(array(
+  'post_type'       => 'slider',
+  'post_status'     => 'publish',
+  'posts_per_page'  => -1
+));
+
 $areasArray = new WP_Query(array(
   'post_type'       => 'areas-de-practica',
   'post_status'     => 'publish',
@@ -21,40 +27,63 @@ $casesArray = new WP_Query(array(
     <div class="row justify-content-end mt-5 pt-3">
       <div class="col text-right">
         <ul class="list-inline" id="social-icons">
+          <?php if(!empty(get_option('facebook'))): ?>
           <li class="list-inline-item px-3">
-            <a href="https://www.facebook.com/CCAbogadosEC" target="_blank" class="mr-3">
+            <a href="<?php echo get_option('facebook') ?>" target="_blank" class="mr-3">
               <i class="fab fa-facebook-f fa-lg"></i>
             </a>
           </li>
+          <?php endif;
+          if(!empty(get_option('instagram'))): ?>
           <li class="list-inline-item px-3">
-            <a href="https://www.instagram.com/abogados_cc/" target="_blank" class="mr-3">
+            <a href="<?php echo get_option('instagram') ?>" target="_blank" class="mr-3">
               <i class="fab fa-instagram fa-lg"></i>
             </a>
           </li>
-          <!-- <li class="list-inline-item px-3">
-            <a href="#" target="_blank" class="mr-3">
+          <?php endif;
+          if(!empty(get_option('linkedin'))): ?>
+          <li class="list-inline-item px-3">
+            <a href="<?php echo get_option('linkedin') ?>" target="_blank" class="mr-3">
               <i class="fab fa-linkedin-in fa-lg"></i>
             </a>
-          </li> -->
+          </li>
+          <?php endif;
+          if(get_option('twitter')): ?>
           <li class="list-inline-item px-3">
-            <a href="https://twitter.com/abogados_cc" target="_blank" class="mr-3">
+            <a href="<?php echo get_option('twitter') ?>" target="_blank" class="mr-3">
               <i class="fab fa-twitter fa-lg"></i>
             </a>
           </li>
+          <?php endif ?>
         </ul>
       </div>
     </div>
 
     <div class="row mt-3">
-      <div class="col-6 col-md-2 d-none d-md-block">
-        <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
-      </div>
-      <div class="col-md-6">
-        <h2 class="main-title text-blue">Compromiso y experiencia</h2>
-        <h3 class="main-subtitle text-golden">al servicio de tu caso</h3>
-        <p class="mt-3">Si necesitas asesoría en tus conflictos, nuestro equipo jurídico está aquí para ayudarte.</p>
+      <div class="col">
+        <div id="main-carousel" class="carousel slide carousel-fade" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <?php foreach($sliderArray->posts as $key => $slide): ?>
+            <li data-target="#main-carousel" data-slide-to="<?php echo $key ?>" <?php if($key == 0) echo "class=\"active\"" ?>></li>
+            <?php endforeach ?>
+          </ol>
+          <div class="carousel-inner">
+            <?php $first = true;
+            while($sliderArray->have_posts()): $sliderArray->the_post() ?>
+              <div class="carousel-item <?php if($first) echo 'active' ?>">
+                <?php the_post_thumbnail('large', array('class' => 'd-block w-100')) ?>
+                <div class="carousel-caption text-left">
+                  <h2 class="main-title text-blue"><?php echo the_title() ?></h2>
+                  <h3 class="main-subtitle text-golden"><?php echo get_field('subtitle') ?></h3>
+                  <p class="mt-3 text-dark"><?php echo get_field('summary') ?></p>
 
-        <a href="#contact-form" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
+                  <a href="#contact-form" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
+                </div>
+              </div>
+            <?php $first = false;
+            endwhile ?>
+          </div>
+        </div>
       </div>
     </div>
 

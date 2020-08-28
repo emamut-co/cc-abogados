@@ -40,10 +40,18 @@
               <div class="media">
                 <img src="<?php echo get_template_directory_uri() ?>/images/ico-share.png" alt="" class="mr-3">
                 <div class="media-body">
-                  <a href="https://www.facebook.com/CCAbogadosEC" target="_blank"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
-                  <a href="https://twitter.com/abogados_cc" target="_blank"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
-                  <!-- <a href="#"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a> -->
-                  <a href="https://www.instagram.com/abogados_cc/" target="_blank"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
+                  <?php if(!empty(get_option('facebook'))): ?>
+                  <a href="<?php echo get_option('facebook') ?>" target="_blank"><i class="fab fa-facebook-f text-white fa-lg ml-4"></i></a>
+                  <?php endif;
+                  if(!empty(get_option('instagram'))): ?>
+                  <a href="<?php echo get_option('instagram') ?>" target="_blank"><i class="fab fa-instagram text-white fa-lg ml-4"></i></a>
+                  <?php endif;
+                  if(!empty(get_option('linkedin'))): ?>
+                  <a href="<?php echo get_option('linkedin') ?>"><i class="fab fa-linkedin text-white fa-lg ml-4"></i></a>
+                  <?php endif;
+                  if(!empty(get_option('twitter'))): ?>
+                  <a href="<?php echo get_option('twitter') ?>" target="_blank"><i class="fab fa-twitter text-white fa-lg ml-4"></i></a>
+                  <?php endif ?>
                 </div>
               </div>
             </div>
