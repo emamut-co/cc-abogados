@@ -26117,7 +26117,7 @@ body {
 
 #main-carousel .carousel-caption {
   left: 0rem;
-  bottom: 2rem;
+  top: -1rem;
 }
 #main-carousel .carousel-caption .main-title, #main-carousel .carousel-caption .main-subtitle {
   font-family: "Times New Roman", serif;
