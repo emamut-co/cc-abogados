@@ -61,10 +61,10 @@ $casesArray = new WP_Query(array(
 
     <div class="row mt-3">
       <div class="col-2 d-none d-md-block">
-        <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid">
+        <img src="<?php echo get_template_directory_uri() ?>/images/lustitia.png" alt="" class="img-fluid ml-3 mt-3">
       </div>
       <div class="col-md-8">
-        <div id="main-carousel" class="carousel slide" data-ride="carousel">
+        <div id="main-carousel" class="carousel slide mt-md-4 ml-md-4" data-ride="carousel">
           <ol class="carousel-indicators">
             <?php foreach($sliderArray->posts as $key => $slide): ?>
             <li data-target="#main-carousel" data-slide-to="<?php echo $key ?>" <?php if($key == 0) echo "class=\"active\"" ?>></li>
