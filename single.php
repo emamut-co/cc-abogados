@@ -11,15 +11,19 @@
           the_post_thumbnail('large', array('class' => 'img-fluid'));
         endif ?>
         <div class="row my-5 pb-2">
+          <?php if(is_singular( 'post' )): ?>
           <div class="col-md-2 d-none d-md-block">
             <div id="post-author-section">
               <img src="<?php echo get_avatar_url($author_id) ?>" alt="" class="img-fluid border-left" style="border-radius: 3rem;">
             </div>
           </div>
+          <?php endif ?>
           <div class="col">
+            <?php if(is_singular( 'post' )): ?>
             <h4 class="text-golden font-times">
               <?php echo get_the_author_meta( 'display_name', $author_id ); ?>
             </h4>
+            <?php endif ?>
             <div class="mt-4 d-md-flex justify-content-between">
               <span class="text-muted">
                 <?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?>

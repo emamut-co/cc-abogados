@@ -71,13 +71,13 @@ $casesArray = new WP_Query(array(
             <?php $first = true;
             while($sliderArray->have_posts()): $sliderArray->the_post() ?>
               <div class="carousel-item <?php if($first) echo 'active' ?>">
-                <?php the_post_thumbnail('large', array('class' => 'd-block w-100')) ?>
+                <?php the_post_thumbnail('large', array('class' => 'd-block img-fluid')) ?>
                 <div class="carousel-caption text-left">
                   <h2 class="main-title text-blue"><?php echo the_title() ?></h2>
                   <h3 class="main-subtitle text-golden"><?php echo get_field('subtitle') ?></h3>
-                  <p class="mt-3 text-dark"><?php echo get_field('summary') ?></p>
+                  <p class="mt-3 text-dark main-summary"><?php echo get_field('summary') ?></p>
 
-                  <a href="#contact-form" class="btn btn-dark btn-action">Solicita asesoría gratuita</a>
+                  <a href="#contact-form" class="btn btn-dark btn-action d-none d-md-block">Solicita asesoría gratuita</a>
                 </div>
               </div>
             <?php $first = false;
