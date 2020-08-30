@@ -26131,6 +26131,10 @@ body {
   background-color: #B7884B;
 }
 
+#our-team-anchor {
+  scroll-margin-top: 5rem;
+}
+
 #areas-de-practica li {
   font-size: 0.9rem;
 }
@@ -26153,6 +26157,9 @@ body {
   background-position-y: bottom !important;
 }
 
+#areas-list {
+  scroll-margin-top: 5rem;
+}
 #areas-list ul {
   list-style-type: none;
   -webkit-padding-start: 0.8rem;
@@ -26167,6 +26174,9 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
+#cases {
+  scroll-margin-top: 5rem;
+}
 #cases .card {
   border: none;
   border-left: 1px solid #B7884B;
