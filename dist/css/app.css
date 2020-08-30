@@ -26028,6 +26028,13 @@ html {
   scroll-behavior: smooth;
 }
 
+:target:before {
+  content: "";
+  display: block;
+  height: 200px;
+  margin: -200px 0 0;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin-top: 5.5rem;
@@ -26109,8 +26116,8 @@ body {
 }
 
 #main-carousel .carousel-caption {
-  left: 22rem;
-  bottom: 15rem;
+  left: 0rem;
+  top: -1rem;
 }
 #main-carousel .carousel-caption .main-title, #main-carousel .carousel-caption .main-subtitle {
   font-family: "Times New Roman", serif;
@@ -26122,6 +26129,10 @@ body {
 }
 #main-carousel .carousel-indicators .active {
   background-color: #B7884B;
+}
+
+#our-team-anchor {
+  scroll-margin-top: 5rem;
 }
 
 #areas-de-practica li {
@@ -26146,6 +26157,9 @@ body {
   background-position-y: bottom !important;
 }
 
+#areas-list {
+  scroll-margin-top: 5rem;
+}
 #areas-list ul {
   list-style-type: none;
   -webkit-padding-start: 0.8rem;
@@ -26160,6 +26174,9 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.2);
 }
 
+#cases {
+  scroll-margin-top: 5rem;
+}
 #cases .card {
   border: none;
   border-left: 1px solid #B7884B;
@@ -26206,15 +26223,21 @@ ul.pagination .page-item a {
     padding-left: 15px;
   }
 
+  #main-carousel .carousel-item img {
+    height: 22rem;
+  }
   #main-carousel .carousel-caption {
     left: 0rem;
-    bottom: 0rem;
+    top: 0rem;
   }
-  #main-carousel .carousel-caption .main-title, #main-carousel .carousel-caption .main-subtitle {
-    font-size: 1rem;
+  #main-carousel .carousel-caption .main-title {
+    font-size: 1.9rem;
+  }
+  #main-carousel .carousel-caption .main-subtitle {
+    font-size: 1.6rem;
   }
   #main-carousel .carousel-caption .main-summary {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   ul.pagination .page-item a {

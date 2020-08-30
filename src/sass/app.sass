@@ -21,6 +21,12 @@ $fa-font-path: '../../fonts/vendor/@fortawesome/fontawesome-free' !default
 html
   scroll-behavior: smooth
 
+:target:before
+  content: ''
+  display: block
+  height: 200px
+  margin: -200px 0 0
+
 body
   font-family: 'Roboto', sans-serif
   margin-top: 5.5rem
@@ -94,8 +100,8 @@ body
 
 #main-carousel
   .carousel-caption
-    left: 22rem
-    bottom: 15rem
+    left: 0rem
+    top: -1rem
     .main-title, .main-subtitle
       font-family: 'Times New Roman', serif
       font-weight: 300
@@ -105,6 +111,9 @@ body
       height: .3rem
     .active
       background-color: $golden
+
+#our-team-anchor
+  scroll-margin-top: 5rem
 
 #areas-de-practica
   li
@@ -125,6 +134,7 @@ body
   background-position-y: bottom !important
 
 #areas-list
+  scroll-margin-top: 5rem
   ul
     list-style-type: none
     padding-inline-start: .8rem
@@ -137,6 +147,7 @@ body
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .2)
 
 #cases
+  scroll-margin-top: 5rem
   .card
     border: none
     border-left: 1px solid $golden

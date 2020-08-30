@@ -5,7 +5,7 @@
     while (have_posts()) : the_post(); $author_id = get_the_author_meta( 'ID' ); $categories = get_the_category(); ?>
     <div class="row mt-5 pt-4">
       <div class="col-md-8">
-        <h1 class="font-times text-golden"><?php the_title() ?></h1>
+        <h1 class="font-times text-golden h2"><?php the_title() ?></h1>
         <!-- <p class="text-muted"><?php The_excerpt() ?></p> -->
         <?php if ( has_post_thumbnail() ):
           the_post_thumbnail('large', array('class' => 'img-fluid'));
