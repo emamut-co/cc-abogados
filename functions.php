@@ -145,18 +145,9 @@ function add_responsive_class($content){
 }
 add_filter ('the_content', 'add_responsive_class');
 
-function tags_after_single_post_content($content) {
-  if( is_singular('post') && is_main_query() ) {
-    $tags = the_tags('<div class="entry-meta">Temas relacionados: ',' • ','</div><br />');
-    $content .= $content . $tags;
-  }
-  return $content;
-}
-add_filter( 'the_content', 'tags_after_single_post_content' );
-
-function add_class_the_tags($html) {
+function add_class_the_tags($html){
   $postid = get_the_ID();
-  $html = str_replace('<a','<a class="text-golden font-weight-bold"',$html);
+  $html = str_replace('<a','<a class="text-golden"', $html);
   return $html;
 }
-add_filter('the_tags','add_class_the_tags');
+add_filter('the_tags','add_class_the_tags',10,1);

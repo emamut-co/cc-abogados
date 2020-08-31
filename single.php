@@ -33,7 +33,9 @@
               </span>
             </div>
             <div class="mt-5">
-              <?php the_content(); ?>
+              <?php the_content();
+
+              the_tags( '<p class="font-weight-bold mt-5">Temas relacionados: ', ' • ', '<br />' ); ?>
             </div>
           </div>
         </div>
