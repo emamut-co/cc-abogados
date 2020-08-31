@@ -144,3 +144,10 @@ function add_responsive_class($content){
   return $html;
 }
 add_filter ('the_content', 'add_responsive_class');
+
+function add_class_the_tags($html){
+  $postid = get_the_ID();
+  $html = str_replace('<a','<a class="text-golden"', $html);
+  return $html;
+}
+add_filter('the_tags','add_class_the_tags',10,1);
