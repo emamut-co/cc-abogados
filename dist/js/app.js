@@ -32362,31 +32362,11 @@ jquery__WEBPACK_IMPORTED_MODULE_2___default()(function () {
         transition: transition
       });
     }
-  } // $(document).ready(function() {
-  //   // Add smooth scrolling to all links
-  //   $('a').on('click', function(event) {
-  //     // Make sure this.hash has a value before overriding default behavior
-  //     if (this.hash !== '') {
-  //       // Prevent default anchor click behavior
-  //       event.preventDefault();
-  //       // Store hash
-  //       var hash = this.hash;
-  //       // Using jQuery's animate() method to add smooth page scroll
-  //       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-  //       $('html, body').animate(
-  //         {
-  //           scrollTop: $(hash).offset().top - 140,
-  //         },
-  //         500,
-  //         function() {
-  //           // Add hash (#) to URL when done scrolling (default click behavior)
-  //           window.location.hash = hash;
-  //         }
-  //       );
-  //     } // End if
-  //   });
-  // });
+  }
 
+  jquery__WEBPACK_IMPORTED_MODULE_2___default()('#main-carousel').carousel({
+    interval: 8000
+  });
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
