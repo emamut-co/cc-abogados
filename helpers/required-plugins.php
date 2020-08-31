@@ -33,8 +33,8 @@ function my_theme_register_required_plugins()
       'required'  => true
     ),
     array(
-      'name'      => 'Social Share Buttons by Supsystic',
-      'slug'      => 'supsystic-social-sharing',
+      'name'      => 'AddToAny Share Buttons',
+      'slug'      => 'add-to-any',
       'required'  => true
     ),
     array(
