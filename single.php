@@ -29,7 +29,6 @@
                 <?php echo date_i18n('F j, Y') . ' - ' . reading_time(); ?>
               </span> <br class="d-sm-block">
               <span class="text-muted">
-                <!-- Compartir: <?php echo do_shortcode('[supsystic-social-sharing id="1"]') ?> -->
                 Compartir: <?php echo do_shortcode("[addtoany]") ?>
               </span>
             </div>
