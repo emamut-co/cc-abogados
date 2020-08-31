@@ -3,7 +3,7 @@
 <div class="row">
   <div class="container">
     <?php while (have_posts()) : the_post(); ?>
-    <div class="row">
+    <div class="row mt-4">
       <div class="col">
         <div class="card bg-transparent border-bottom-golden pb-4 mb-4">
           <div class="row no-gutters">
