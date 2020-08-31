@@ -36,6 +36,11 @@ function my_theme_register_required_plugins()
       'name'      => 'Social Share Buttons by Supsystic',
       'slug'      => 'supsystic-social-sharing',
       'required'  => true
+    ),
+    array(
+      'name'      => 'Yoast SEO',
+      'slug'      => 'wordpress-seo',
+      'required'  => true
     )
 
   );
